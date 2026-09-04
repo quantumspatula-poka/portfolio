@@ -14,17 +14,20 @@ object NeaServer:
   def run[F[_]: Async: Network]: F[Nothing] = {
     for {
       client <- EmberClientBuilder.default[F].build
-      helloWorldAlg = HelloWorld.impl[F]
-      jokeAlg = Jokes.impl[F](client)
 
       // Combine Service Routes into an HttpApp.
       // Can also be done via a Router if you
       // want to extract segments not checked
       // in the underlying routes.
       httpApp = (
-        NeaRoutes.helloWorldRoutes[F](helloWorldAlg) <+>
-        NeaRoutes.jokeRoutes[F](jokeAlg) <+>
-        NeaRoutes.index
+        NeaRoutes.index <+>
+        NeaRoutes.login <+>
+        NeaRoutes.home <+>
+        NeaRoutes.questionnaire <+>
+        NeaRoutes.profile <+>
+        NeaRoutes.browse <+>
+        NeaRoutes.chat <+>
+        NeaRoutes.settings
       ).orNotFound
 
       // With Middlewares in place
