@@ -1,4 +1,4 @@
-package zofia.nea
+package zofia.portfolio
 
 import cats.effect.{IO, IOApp}
 

@@ -1,4 +1,4 @@
-package zofia.nea
+package zofia.portfolio
 
 import scalatags.Text
 import scalatags.Text.all.*
@@ -16,12 +16,7 @@ object MainPage {
           
         )
       ),
-      body(
-        div(
-          id := "body",
-          fragment
-        )
-      )
+      fragment
     )
   }
 }

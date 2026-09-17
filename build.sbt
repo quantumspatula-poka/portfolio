@@ -8,7 +8,7 @@ val Http4sScalatagsVersion = "0.25.3"
 lazy val root = (project in file("."))
   .settings(
     organization := "zofia",
-    name := "nea",
+    name := "portfolio",
     version := "0.0.1-SNAPSHOT",
     scalaVersion := "3.3.6",
     libraryDependencies ++= Seq(
