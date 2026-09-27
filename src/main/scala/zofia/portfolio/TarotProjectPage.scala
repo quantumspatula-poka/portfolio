@@ -9,7 +9,11 @@ object TarotProjectPage {
       id := "body",
       h1("The tarot project - redesigning the 22 cards of the major arcana of a tarot deck"),
       h3("(except i only ended up doing half of them because i ran out of time)"),
-      p("In this project, i created human designs and other artworks of 10 tarot cards from the major arcana. They are sorted here in ascending order, with a few additional artworks towards the end."),
+      p(
+        """
+          |In this project, i created human designs and other artworks of 10 tarot cards from the major arcana.
+          |They are sorted here in ascending order, with a few additional artworks towards the end.
+          |Disclaimer: this page is under construction and very incomplete. Im working on it, i just need a bit of time.""".stripMargin),
       br(),
       h3("0 - The Fool"),
       p(

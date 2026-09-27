@@ -2,7 +2,6 @@ package zofia.portfolio
 
 import cats.effect.*
 import org.http4s.server.Router
-//import cats.syntax.all.*
 import com.comcast.ip4s.*
 import fs2.io.file.Files
 import fs2.io.net.Network
@@ -34,6 +33,7 @@ object NeaServer:
       _ <-
         EmberServerBuilder.default[F]
           .withHost(ipv4"0.0.0.0")
+          //.withHost(ipv4"192.168.0.24")
           .withPort(port"8080")
           .withHttpApp(finalHttpApp)
           .build
